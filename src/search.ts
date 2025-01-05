@@ -1,7 +1,7 @@
 import { getPreferenceValues, showToast, Toast } from "@raycast/api";
 import { runAppleScript } from "@raycast/utils";
 
-import { Items } from './types';
+import { Items } from "./types";
 
 export async function search(setItems: (items: Items[]) => void, setLoading: (loading: boolean) => void) {
   try {

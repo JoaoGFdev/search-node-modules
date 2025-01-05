@@ -1,9 +1,13 @@
 import { Alert, confirmAlert, showToast, Toast } from "@raycast/api";
 import { runAppleScript } from "@raycast/utils";
 
-import { Items } from './types';
+import { Items } from "./types";
 
-export const handleDeleteAll = async (paths: string[], setItems: (items: Items[]) => void, setDeletedItems: (deletedItems: Set<string>) => void) => {
+export const handleDeleteAll = async (
+  paths: string[],
+  setItems: (items: Items[]) => void,
+  setDeletedItems: (deletedItems: Set<string>) => void,
+) => {
   try {
     const options: Alert.Options = {
       title: "Delete All",
@@ -53,7 +57,10 @@ export const handleDeleteAll = async (paths: string[], setItems: (items: Items[]
   }
 };
 
-export const handleDelete = async (path: string, setDeletedItems: React.Dispatch<React.SetStateAction<Set<string>>>) => {
+export const handleDelete = async (
+  path: string,
+  setDeletedItems: React.Dispatch<React.SetStateAction<Set<string>>>,
+) => {
   try {
     const options: Alert.Options = {
       title: "Delete",
